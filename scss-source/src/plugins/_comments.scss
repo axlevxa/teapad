@@ -1,0 +1,153 @@
+.sidebar-comment .btn {
+    margin-top: 10px;
+    padding: 3px 8px;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+
+.sidebar-comment .btn.btn-primary:not(#comment-create-btn) {
+    background-color: $primary;
+    color: $white;
+}
+
+.sidebar-comment .suggestion-create {
+    margin-top: 10px;
+}
+
+.suggestion-display {
+    line-height: 24px;
+}
+
+.suggestion-display .from-value,
+.suggestion-display .to-value {
+    color: $text-default;
+    font-weight: bold;
+    font-style: normal;
+    opacity: 1;
+    padding: 2px;
+    border-radius: $border-radius-sm;
+}
+
+.suggestion-display .from-value {
+    margin-right: 5px;
+    background-color: $text-highlight;
+}
+
+.suggestion-display .from-value::before, .suggestion-display .to-value::before, .suggestion-display .from-value::after,.suggestion-display .to-value::after {
+    content: none;
+}
+
+.suggestion-display .to-value {
+    margin-right: 5px;
+    background-color: $bg-well;
+}
+
+.comment-actions-wrapper .buttonicon {
+    opacity: .8;
+}
+
+.comment-actions-wrapper .buttonicon:hover {
+    opacity: 1;
+}
+
+.comment-actions-wrapper .comment-edit {
+    margin-right: 5px;
+}
+
+[type="checkbox"]+label.label-suggestion-checkbox {
+    margin-left: 5px;
+    padding-left: 2.4rem;
+}
+
+.compact-display-content {
+    color: $primary;
+    background-color: $bg-pg;
+}
+
+.sidebar-comment .full-display-content {
+    margin-left: -10px;
+    background-color: $bg-card;
+    border: $border-default;
+    @include box-shadow-sm;
+}
+
+.comment-reply {
+    border-top: 1px solid $border-default;
+    background-color: inherit;
+}
+
+.comment-reply textarea,
+.comment-reply input[type="text"] {
+    background-color: $bg-well;
+}
+
+.comment-edit-form {
+    margin-top: 15px;
+}
+
+
+/* MODAL */
+
+.comment-modal .full-display-content {
+    box-shadow: none;
+    margin: 0 !important;
+    border: none;
+    background-color: $bg-card;
+}
+
+.comment-modal .comment-modal-comment {
+    padding: 0;
+}
+
+.comment-modal .comment-reply textarea,
+.comment-modal .comment-reply input[type="text"] {
+    background-color: $bg-well;
+}
+
+.comment-modal .comment-reply {
+    border-top: $border-default;
+}
+
+.comment-modal .full-display-content .comment-title-wrapper,
+.comment-modal .full-display-content .comment-reply {
+    padding: 15px;
+}
+
+
+/* NEW COMMENT POPUP */
+
+.new-comment-popup textarea {
+    background-color: $bg-well;
+}
+
+.new-comment-popup .suggestion {
+    margin-bottom: 10px;
+}
+
+.suggestion-create .from-value {
+    background-color: $text-highlight;
+    border-radius: $border-radius-sm;
+    padding: 2px;
+    font-weight: bold;
+}
+
+
+/* EDITOR COMMENTEED LINE */
+
+#innerdocbody .ace-line .comment {
+    background-color: $text-highlight;
+    border-radius: $border-radius-xs;
+    color: $text-default !important;
+}
+
+@media (min-width: 1200px) {
+    #comments {
+        width: 300px;
+    }
+    .sidebar-comment .full-display-content {
+        margin-left: 10px;
+    }
+    .compact-display-content {
+        padding-left: 20px;
+    }
+}

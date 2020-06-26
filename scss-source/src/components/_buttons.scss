@@ -1,0 +1,49 @@
+button,
+.btn {
+    padding: 5px 20px;
+    border-radius: $border-radius-sm;
+    line-height: 1.5;
+    width: auto;
+    border: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    position: relative;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: $button-primary;
+    color: $white;
+    @include transition-sm(background-color);
+    @include transition-sm(box-shadow);
+    @include transition-sm(color);
+    box-shadow: $box-shadow-xs;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: $button-primary-active;
+    color: inherit;
+    color: $white;
+    box-shadow: none;
+}
+
+.btn-default {
+    color: $button-default-text;
+    background-color: $button-default;
+    @include transition-sm(background-color);
+    @include transition-sm(box-shadow);
+    box-shadow: $box-shadow-xs;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active {
+    background-color: $button-default-active;
+    color: inherit;
+    box-shadow: none;
+}
+
+.buttonicon:before,
+[class^="buttonicon-"]:before,
+[class*=" buttonicon-"]:before {
+    line-height: 18px;
+}

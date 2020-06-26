@@ -1,0 +1,18 @@
+#importmessageabiword {
+    font-style: italic;
+    color: $primary;
+}
+
+#importmessageabiword>a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: $primary;
+}
+
+#importmessagefail {
+    margin-top: 10px;
+}
+
+#importsubmitinput[disabled] {
+    opacity: .6;
+}

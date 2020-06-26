@@ -1,0 +1,173 @@
+/* .super-light-toolbar .toolbar, .super-light-toolbar .popup-content, #pad_title  {
+  --text-color: var(--super-dark-color);
+  --text-soft-color: var(--dark-color);
+  --border-color: #e4e6e9;
+  --bg-soft-color: var(--light-color);
+  --bg-color: var(--super-light-color);
+} */
+
+.toolbar {
+    border-bottom: 1px $border-default;
+    padding: 5px;
+    background-color: $bg-white;
+    color: #576273;
+    color: $text-light;
+    border-bottom: $border-default;
+}
+
+#editbar {
+    padding: 5px;
+}
+
+#editbar.editor-scrolled {
+    /* on scroll styles here */
+}
+
+.toolbar ul {
+    align-items: center;
+}
+
+.toolbar ul.menu_left {
+    padding-left: 5px;
+}
+
+.toolbar ul li {
+    margin: 7px 1px;
+}
+
+.toolbar ul li a,
+.toolbar .buttonicon {
+    color: inherit;
+}
+
+.toolbar .buttonicon {
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.buttonicon-insertorderedlist:before,
+.buttonicon-insertunorderedlist:before,
+.buttonicon-indent:before,
+.buttonicon-outdent:before {
+    font-size: 16px !important;
+}
+
+.toolbar ul li.separator {
+    visibility: hidden;
+    width: 1px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.toolbar.condensed ul li {
+    margin-left: 0;
+}
+
+.toolbar.condensed ul li.separator {
+    margin: 0 5px;
+}
+
+.toolbar ul li a {
+    background-color: transparent;
+    background: none;
+    border: none;
+    border-radius: 3px !important;
+    transition: background-color .1s;
+}
+
+.toolbar ul li a:hover,
+.toolbar ul li select:hover {
+    background-color: $button-default-active;
+    color: $primary;
+}
+
+.toolbar ul li a.selected {
+    background-color: $primary;
+    color: $white;
+}
+
+
+/* .toolbar ul li a.pressed,
+.toolbar ul li select:active {
+  color:;
+} */
+
+.toolbar ul li select:active option {
+    background-color: $bg-white;
+    color: $text-light;
+    padding: 5px;
+}
+
+.toolbar .menu_right li a.selected {
+    background-color: $primary;
+    color: $white;
+}
+
+.toolbar ul li[data-key="showusers"]>a {
+    margin: 0;
+    margin-left: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    border-radius: 30px !important;
+}
+
+.toolbar ul li[data-key="showusers"]>a #online_count {
+    padding-right: 4px;
+}
+
+.buttonicon-showusers::before {
+    width: 17px;
+}
+
+.toolbar .menu_right .separator {
+    display: none;
+}
+
+.toolbar .menu_right li {
+    margin-left: 10px;
+}
+
+.toolbar.cropped .menu_left {
+    height: 39px;
+    padding-top: 1px;
+}
+
+.toolbar .show-more-icon-btn {
+    font-size: 1.8rem;
+    color: $primary;
+}
+
+@media (max-width: 1000px) {
+    .toolbar ul li.separator {
+        margin: 0 5px;
+        background: none;
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    .toolbar ul li {
+        margin: 5px 2px;
+    }
+    .toolbar .menu_right {
+        border-top: none;
+        background-color: $bg-white;
+        @include box-shadow-lg;
+        padding: 0;
+    }
+    .toolbar ul li a:hover {
+        background-color: transparent;
+    }
+    .toolbar ul li.separator {
+        margin: 0;
+        display: none;
+    }
+    .toolbar ul li[data-key=showusers]>a {
+        border-radius: 0px !important;
+        padding: 0px;
+    }
+    .toolbar ul li[data-key="showusers"]>a #online_count {
+        padding-right: 0px;
+    }
+}

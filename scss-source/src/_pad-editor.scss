@@ -1,0 +1,74 @@
+#innerdocbody {
+    font-size: 1.1em;
+    line-height: 1.7em;
+    padding: 5px;
+    background: $bg-white;
+    color: $text-default;
+}
+
+#innerdocbody a {
+    color: $link;
+    text-decoration: underline;
+    text-decoration-color: $link;
+    -webkit-text-decoration-color: $link;
+    text-decoration-thickness: 1px;
+    text-decoration-style: solid;
+}
+
+#innerdocbody a:hover {
+    text-decoration: underline;
+    text-decoration-color: $link-active;
+    -webkit-text-decoration-color: $link-active;
+    text-decoration-thickness: 1px;
+    text-decoration-style: solid;
+    color: $link;
+}
+
+#innerdocbody h1 {
+    color: $text-default;
+    font-size: $text-default;
+    font-weight: 700;
+}
+
+#innerdocbody h2 {
+    color: $text-default;
+    font-size: 1.65rem;
+    font-weight: 700;
+}
+
+#innerdocbody h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-lightest;
+}
+
+#innerdocbody h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $text-lightest;
+}
+
+#innerdocbody h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $text-lightest;
+}
+
+#innerdocbody h1,
+#innerdocbody h2,
+#innerdocbody h3,
+#innerdocbody h4 {
+    line-height: 1.2;
+    margin-bottom: .7rem;
+    letter-spacing: -0.2px;
+}
+
+#innerdocbody h1 span,
+#innerdocbody h2 span,
+#innerdocbody h3 span,
+#innerdocbody h4 span {
+    padding-top: 0;
+}
+#innerdocbody span[class^='author-'] {
+    border-radius: $border-radius-xs;
+}

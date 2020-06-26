@@ -1,0 +1,33 @@
+@media (min-width: 721px) {
+     ::-webkit-scrollbar-track {
+        background-color: $scrollbar-track;
+        border-radius: 10px;
+        border: 7px solid $scrollbar-bg;
+    }
+     ::-webkit-scrollbar {
+        width: 22px;
+    }
+     ::-webkit-scrollbar-thumb {
+        min-height: 40px;
+        border-radius: 10px;
+        background-color: $scrollbar-thumb;
+        border: 7px solid $scrollbar-bg;
+    }
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+    background-color: $scrollbar-bg;
+    border-radius: 0px;
+    border: none;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    min-height: 40px;
+    background-color: $scrollbar-bg;
+    border: none;
+}

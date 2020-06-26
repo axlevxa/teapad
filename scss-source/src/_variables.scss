@@ -1,0 +1,170 @@
+/* -----------------------------------------------------------------
+ * SASS VARIABLES
+ * -----------------------------------------------------------------
+ */
+
+// Colors
+$blue-default: #1D30FA;
+$blue-default-dark: #1A2ACE;
+$blue-alt: #336FA3;
+$blue-alt-dark: #1F4464;
+$gray-900: #2C2C2C;
+$gray-700: #5F5F5F;
+$gray-600: #686868;
+$gray-400: #DBDBDB;
+$gray-300: #E1E4E8;
+$gray-200: #f7f7f7;
+$gray-100: #FBFBFB;
+$yellow: #ffea61;
+$black: #000;
+$white: #FFF;
+
+// Color Scheme
+$primary: $blue-default;
+$primary-active: $blue-default-dark;
+    
+$text-default: $gray-900; // body text
+$text-light: $gray-700; // inputs
+$text-lightest: $gray-600; //H3-H5
+$text-highlight: $yellow;
+$link: $blue-alt;
+$link-active: $blue-alt-dark;
+
+$border-light: $gray-300;
+
+$button-primary: $primary;
+$button-primary-active: $primary-active;
+$button-primary-text: $white;
+
+$button-default: $gray-300;
+$button-default-active: $gray-400;
+$button-default-text: $gray-700;
+
+$bg-pg: $gray-100;
+$bg-white: $white;
+$bg-card: $white;
+$bg-well: $gray-200;
+$bg-well-active: $gray-400;
+
+// Typography
+$font-stack: "inter", "Open Sans", Helvetica, Arial, sans-serif;
+
+// Borders
+$border-radius-lg: 6px;
+$border-radius-sm: 4px;
+$border-radius-xs: 2px;
+$border-default: 1px solid $border-light;
+$border-primary: 1px solid $primary;
+
+// Box Shadows
+$box-shadow-xs: 0 1px 1px 0 rgba(0,0,0,.15);
+$box-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
+$box-shadow-lg: 0 1px 7px 2px rgba(0,0,0,.08);
+
+@mixin box-shadow-xs {
+    box-shadow: $box-shadow-xs;
+    -webkit-box-shadow: $box-shadow-xs;
+    -ms-box-shadow: $box-shadow-xs;
+}
+
+@mixin box-shadow-sm {
+    box-shadow: $box-shadow-sm;
+    -webkit-box-shadow: $box-shadow-sm;
+    -ms-box-shadow: $box-shadow-sm;
+}
+
+@mixin box-shadow-lg {
+    box-shadow: $box-shadow-lg;
+    -webkit-box-shadow: $box-shadow-lg;
+    -ms-box-shadow: $box-shadow-lg;
+}
+
+// Transitions
+@mixin transition-lg($property) {
+    transition: 1s $property;
+    transition-timing-function: cubic-bezier(.18,.55,.83,.67);
+}
+@mixin transition-sm($property) {
+    transition: 0.4s $property;
+}
+
+// Scrollbars
+$scrollbar-bg: $bg-well;
+$scrollbar-track: $bg-white;
+$scrollbar-thumb: $text-light;
+
+
+/* -----------------------------------------------------------------
+ * TYPOGRAPHY BASE
+ * -----------------------------------------------------------------
+ */
+
+@font-face {
+    font-family: 'inter';
+    src: url('src/fonts/inter/Inter-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('src/fonts/inter/Inter-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('src/fonts/inter/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('src/fonts/inter/Inter-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    color: $text-default;
+    font-family: $font-stack;
+}
+
+::selection {
+    color: $white;
+    background: $primary;
+}
+
+/* -----------------------------------------------------------------
+ * EDITOR PADDING
+ * -----------------------------------------------------------------
+ */
+
+:root {
+  --editor-horizontal-padding: 55px;
+  --editor-vertical-padding: 40px;
+}
+
+@media (max-width:1000px) {
+  :root {
+    --editor-horizontal-padding: 15px;
+    --editor-vertical-padding: 15px;
+  }
+}
+
+@media (max-width:600px) {
+  :root {
+    --editor-horizontal-padding: 15px;
+    --editor-vertical-padding: 15px;
+  }
+}

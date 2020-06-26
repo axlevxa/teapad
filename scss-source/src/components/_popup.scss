@@ -1,0 +1,117 @@
+.popup-content {
+    border-radius: 5px;
+    padding: 25px;
+    background-color: $bg-card;
+    color: $text-light;
+    border: $border-primary;
+    @include box-shadow-lg;
+}
+
+#mycolorpicker,
+#users {
+    min-width: 0;
+}
+
+#myusernameedit {
+    box-shadow: none;
+    border-bottom: $border-primary !important;
+}
+
+.popup h1 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: $primary;
+}
+
+.popup h2 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    color: $text-lightest;
+    font-size: 1.1em;
+}
+
+.popup input[type="text"] {
+    padding: 7px;
+}
+
+.popup:not(.comment-modal) p {
+    margin: 10px 0;
+}
+
+.popup .dropdowns-container .dropdown-line {
+    margin-top: 15px;
+}
+
+.popup .dropdowns-container label {
+    width: 120px;
+    display: inline-block;
+}
+
+.popup .dropdowns-container .nice-select {
+    min-width: 180px;
+}
+
+.nice-select .list {
+    transform: scale(.99) translateY(-4px);
+    -webkit-transform: scale(.99) translateY(-4px);
+    -ms-transform: scale(.99) translateY(-4px);
+    transform-origin: top;
+}
+
+.popup>.popup-content {
+    transform: scale(0.99);
+    transform-origin: top;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.74, -0.05, 0.27, 1.75)
+}
+
+.popup.popup-show>.popup-content,
+.popup#users.chatAndUsers>.popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+    .popup>.popup-content {
+        transform: scale(1);
+        transition: none;
+    }
+    .nice-select .list {
+        transform: scale(1) translateY(0px);
+        -webkit-transform: scale(1) translateY(0px);
+        -ms-transform: scale(1) translateY(0px);
+        transition: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .popup-content {
+        padding: 1rem;
+        @include box-shadow-lg;
+    }
+    .popup .dropdowns-container select {
+        min-width: 0;
+    }
+}
+
+
+/* SKIN Variants Popup */
+
+#skin-variants {
+    bottom: 0;
+    left: 0;
+    right: auto;
+    top: auto;
+}
+
+#skin-variants .popup-content>p {
+    margin-top: 25px;
+}
+
+#skin-variants-result {
+    background-color: $bg-card;
+}
+
+.skin-variant-container {
+    text-transform: capitalize;
+}
